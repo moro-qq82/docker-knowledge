@@ -1,8 +1,8 @@
-version: '2'
+# version: '2'
 services:
     app:
-        image: koda/docker-knowledge
-        #build: .
+        # image: koda/docker-knowledge:japanese
+        build: .
         volumes:
             - ./volumes/knowledge:/root/.knowledge
         ports:
