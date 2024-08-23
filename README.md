@@ -1,3 +1,9 @@
+# docker-knowledge log4j security issue(CVE-2021-44228) resolved version
+The log4j jar file is replaced by [reload4j](https://github.com/qos-ch/reload4j) jar file. Then, the new war-file is created with reload4j jar file.
+
+This is log4j-security-issue-free version of docker-knowledge.
+
+
 # docker-knowledge
 Docker file for knowledge
 
@@ -12,26 +18,14 @@ Docker file for knowledge
 - [Landing page](https://support-project.org/knowledge_info/index)
 
 
-
-## Get from Docker Hub
-
-```
-docker pull koda/docker-knowledge
-mkdir /home/hoge/knowledge
-chmod a+w /home/hoge/knowledge
-docker run -d -p 80:8080 -v /home/hoge/knowledge:/root/.knowledge --name knowledge koda/docker-knowledge
-```
-
-
-
 ## Build yourself
 
-Get DockerFile and run this command.
+Download war file.
+https://app.box.com/s/26fhcw3c33u1gn7feon8po754ji6g07d
+
+Run this command.
 
 ```
-docker build -t knowledge .
-mkdir ~/home/hoge/knowledge
-chmod a+w /home/hoge/knowledge
-docker run -d -p 80:8080 -v /home/hoge/knowledge:/root/.knowledge --name knowledge knowledge
+docker-compose up -d
 ```
 
